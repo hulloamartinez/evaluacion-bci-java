@@ -1,5 +1,6 @@
 package cl.hulloa.evaluation.controller;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,7 +28,7 @@ public class UserController {
 	@PostMapping("/")
 	public ResponseEntity<Usuario> create(@RequestBody @Valid Usuario user){
 		
-		return ResponseEntity.ok(this.userService.create(user));
+		return new ResponseEntity<>(this.userService.create(user),HttpStatus.CREATED);
 		
 	}
 
