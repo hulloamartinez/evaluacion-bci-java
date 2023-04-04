@@ -36,8 +36,6 @@ public class WebSecurityConfig {
                 .anyRequest()
                 .authenticated()
                 .and()
-                .httpBasic()
-                .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
@@ -71,4 +69,9 @@ public class WebSecurityConfig {
                 .build();
     }
 
+
+    public static void main(String[] args){
+        System.out.println("PASSSS= "+ new BCryptPasswordEncoder().encode("admin"));
+    }
 }
+
