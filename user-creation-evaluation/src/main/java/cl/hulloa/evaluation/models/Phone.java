@@ -31,7 +31,7 @@ public class Phone implements Serializable{
 	private String citycode;
 	private String contrycode;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(optional = false, fetch = FetchType.LAZY)
 	@JoinColumn(name="id_usuario")
 	private Usuario user;
 

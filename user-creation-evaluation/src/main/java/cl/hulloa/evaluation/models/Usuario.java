@@ -70,6 +70,7 @@ public class Usuario implements Serializable {
 	}
 
 
+
 	public UUID getId() {
 		return id;
 	}
@@ -161,8 +162,20 @@ public class Usuario implements Serializable {
 	public void setActive(boolean isActive) {
 		this.isActive = isActive;
 	}
-	
-	
-	
 
+	@Override
+	public String toString() {
+		return "Usuario{" +
+				"id=" + id +
+				", nombre='" + nombre + '\'' +
+				", email='" + email + '\'' +
+				", password='" + password + '\'' +
+				", created='" + created + '\'' +
+				", modified='" + modified + '\'' +
+				", lastLogin='" + lastLogin + '\'' +
+				", isActive=" + isActive +
+				", token='" + token + '\'' +
+				", phones=" + phones +
+				'}';
+	}
 }
